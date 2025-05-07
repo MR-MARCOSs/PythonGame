@@ -13,7 +13,7 @@ player_y = 300
 
 # Função de desenho (60 FPS)
 # Variáveis do jogador
-player = Actor("player", (40, 30))
+player = Actor("player", (4, 3))
 player.speed = 5
 alien = Actor("alien", (40, 30))
 alien.speed = 2
@@ -43,7 +43,7 @@ def update():
             coins.remove(coin)
             score += 1
             # Adiciona nova moeda
-            coins.append(Actor("coin", (random.randint(50, 750), random.randint(50, 550))))
+            coins.append(Actor("coin", (random.randint(50, 1200), random.randint(50, 750))))
 
 
 def draw():
