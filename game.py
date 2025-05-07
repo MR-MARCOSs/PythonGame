@@ -1,13 +1,9 @@
 import pgzrun
 import random
-import math
 
 WIDTH = 1200
 HEIGHT = 750
 TITLE = "Meu Primeiro Jogo PGZero"
-
-player_x = 400
-player_y = 300
 
 player = Actor("player", (4, 3))
 player.speed = 5
@@ -17,16 +13,12 @@ coins = [Actor("coin", (random.randint(50, 750), random.randint(50, 550))) for _
 score = 0
 
 def on_mouse_down(pos):
-    # Dispara quando o mouse é clicado
     print("Clique em:", pos)
-    
-    # Verifica se clicou no alien
     if alien.collidepoint(pos):
         print("Acertou o alien!")
         alien.pos = (random.randint(50, 750), random.randint(50, 550))
-        
+
 def on_mouse_move(pos):
-    # Rastreia movimento do mouse
     player.pos = pos
 
 def update():
